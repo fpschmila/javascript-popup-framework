@@ -50,7 +50,7 @@ The system consists of three components.
 
 
 
-A reference description is provided in the file popup\_framework.odt.
+A reference description is provided in the file **popup\_framework.odt**.
 
 
 
