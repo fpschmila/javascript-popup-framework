@@ -84,6 +84,7 @@ in a directory and open popup.html in a browser.
 |popup\_lib.js|popup JavaScript classes|
 |popup\_lib.css|popup styling|
 |popup\_complete.html|popup templates with includes for above files|
+|popup\_framework.odt|documentation|
 
 
 
