@@ -79,26 +79,20 @@ in a directory and open popup.html in a browser.
 
 ###### Framework
 
-|popup\_lib.js	|popup JavaScript classes|
+|File name|Content|
 |-|-|
-|popup\_lib.css|popup styling<br />|
-|popup\_complete.html|popup templates with includes for above files<br />|
+|popup\_lib.js|popup JavaScript classes|
+|popup\_lib.css|popup styling|
+|popup\_complete.html|popup templates with includes for above files|
 
 
 
 ###### Demo
 
-|popup.html|demo of popups using above framework, requires popup\_lib.js and popup\_lib.css|
+|File name|Content|
 |-|-|
-|eichhorn.jpg, hasen.jpg, rehe.jpg|files needed by demo|
-
-
-
-
-
-
-
-
+|popup.html|demo of popups using above framework, requires popup\_lib.js and popup\_lib.css|
+|eichhorn.jpg, hasen.jpg, rehe.jpg|used in demo for zoom up popups|
 
 
 
