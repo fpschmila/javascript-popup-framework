@@ -61,11 +61,42 @@ A reference description is provided in the file **popup\_framework.odt**.
 copy the files:
 
 * **popup.html**
+* **popup\_lib.js**
+* **popup\_lib.css**
 * rehe.jpg
 * eichhorn.jpg
 * hasen.jpg
 
 in a directory and open popup.html in a browser.
+
+
+
+
+
+#### Files
+
+
+
+###### Framework
+
+|popup\_lib.js	|popup JavaScript classes|
+|-|-|
+|popup\_lib.css|popup styling<br />|
+|popup\_complete.html|popup templates with includes for above files<br />|
+
+
+
+###### Demo
+
+|popup.html|demo of popups using above framework, requires popup\_lib.js and popup\_lib.css|
+|-|-|
+|eichhorn.jpg, hasen.jpg, rehe.jpg|files needed by demo|
+
+
+
+
+
+
 
 
 

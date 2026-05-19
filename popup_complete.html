@@ -1,0 +1,67 @@
+<!-- =====================================================popup system  start ===================================================== --->
+<!-- Copyright (c) 2026 Frank-Peter Schmidt-Lademann										   --->
+<!-- Licensed under the MIT license. See LICENSE file in the project root for details.  	   --->
+	
+	<!-- ============================================== CSS definitions =========================================================== --->
+	<link rel="stylesheet" href="popup_lib.css" type="text/css">
+	
+	<!-- ======================================== java script part of popup system ================================================ --->	
+	<script type="text/javascript" src="popup_lib.js" ></script>
+	 
+
+	<!-- ================================================ popup templates ========================================================= --->
+	<!-- <section> used as wrapper node to get a single parent node for all popup templates											--->
+	<!-- the sript will determine all popup templates as direct div child of the section element for apropriate configuration		--->
+	<!-- when creating a popup instance these top level div of each popup template will be configured:								--->
+	<!-- display: none; position: fixed; opacity: 0; z-index: ${this.zLevel};														--->
+	<!-- tags template and section  back to back to avoid unnecassary Text nodes to create a single top level node in the template	--->
+	<!-- this is especially important when popup instance are created and destructed multiple times									--->
+	
+	<template id="popupElements"><section id="popupElementsSection"> <!-- template wrapper start, keep the two tags back to back --->
+	
+	<!-- Elements used for popup system, there must be a div element at the top level of each popup element as child of the section -->
+	<!-- content, position, visibility  can be controlled by the script as customized there -->
+	
+	<!-- The Text Modal -->
+	<div id="txtModal" class="txt-modal">
+	  <!-- Modal content -->
+	  <div class="modal-wrapper">
+		  <div class="modal-header">
+			<span class="closeBtn">&#x2716;</span>
+			<div class="modal-hdrtxt" id="modalHdrTxt">header</div>
+		  </div>
+		  <div class="modal-body" id="modalBdyTxt">
+			Some text in the Modal..
+		  </div>
+	  </div>
+	</div> 
+
+	<!-- The image Modal -->
+	<div id="imgModal" class="img-modal">
+	  <!-- Modal content -->
+	  <span class="closeBtn">&#x2716;</span>
+	  <!-- image will be displayed as background -->
+	</div>
+
+	<!-- The iframe Modal -->
+	<div class="ifModalMain" id="iframe">
+		<div class="ifModalWrapper">
+		  <div class="modal-header">
+			<span class="closeBtn">&#x2716;</span>
+			<div class="modal-hdrtxt" id="modalHdrTxt">header</div>
+		  </div>
+		  <iframe class="ifModal" id="iframe-obj" src=""></iframe>
+		 </div>
+	</div>
+
+	<!-- The feedback Modal -->
+	<div id="fbModal" class="fb-modal">
+	 some feedback message
+	</div>
+	
+	<!-- The log Modal -->
+	<div id="jslog" class="jsLog">Javascript Log</div>
+	
+	</section></template> <!-- template wrapper end, again keep the two tags back to back --->
+	
+<!-- ===================================================== popup system  end ================================================ --->	

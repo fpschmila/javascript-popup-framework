@@ -1,0 +1,156 @@
+		/***********************************************************************/
+		/* Popup system formatting                                             */
+		/***********************************************************************/
+		
+		/* all modals will be initialized during instanciation with*/
+		/* display:none; position: fixed; opacity: 0 */
+
+		 /* The wiki Modal */
+		.txt-modal {
+		  left: 15%;
+		  top: 20%;
+		  width: 250px; /* Full width */
+		  opacity: 0;
+		  /*height: 300px;*/ /* Full height */
+		  overflow: hidden; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(255,255,255,0.9); /* Black w/ opacity */
+		  border: 1px solid black;
+		  border-radius: 3px;
+		  /*transition: transition: opacity 0.5s ease-in-out;*/
+		}
+
+		.modal-wrapper {
+			display: flex;
+			max-height: 98vh;
+			flex-direction: column;
+
+		}
+
+		/* wiki Modal header */
+		.modal-header {
+		  background-color: silver;
+		  width: 100%
+		  flex: none;
+		  min-height: 18px;
+		  box-sizing: border-box;
+		  border: 0px solid red;
+		  overflow:hidden;
+		}
+		.modal-hdrtxt {
+			border: 0px solid red;
+			text-align: center;
+			font-size: 14px;
+		}
+
+		.modal-body {
+			font-size: 0.8em;
+			padding: 2px 6px 2px 6px;
+			flex: auto;
+			overflow-y: auto;
+		}
+
+
+		/* the feedback target */
+		span.feedback {
+		  display: inline-box;
+		  cursor: pointer;
+		  /*color: #0000ee;*/
+		  font-style: italic;
+		}
+
+		/* The feedback Modal */
+		.fb-modal {
+		  left: 15%;
+		  top: 20%;
+		  /*width: 250px;*/ /* Full width */
+		  padding: 1px 4px 1px 4px;
+		  overflow: auto; /* Enable scroll if needed */
+		  background-color: rgb(0,0,0); /* Fallback color */
+		  background-color: rgba(200,200,200,0.9); /* Black w/ opacity */
+		  border-radius: 3px;
+		  border: 1px solid black;
+		}
+
+		 /* The image Modal */
+		.img-modal {
+		  box-sizing: border-box;
+		  left: 15%;
+		  top: 20%;
+		  width: 250px; /* Full width */
+		  height: 250px;*/ /* Full height */
+		  /*overflow: auto;*/ /* Enable scroll if needed */
+		  background-image: url("none.gif");
+		  opacity: 1.0;
+		  background-size: cover;
+		  background-color: rgb(128,128,128); /* Fallback color */
+		   border:4px #257126 /*var(--logo-green)*/ outset;
+		   border-radius: 4px;
+		  /*box-sizing: border-box;*/
+		   overflow-Y:hidden;
+		   overflow-X:hidden;
+		   cursor: pointer;
+		   transition: all 0.6s ease-in-out, 0.5s;
+		   /*transition: left 0.5s, height 0.5s, width 0.5s, 0.1s ease-in-out;*/
+		}
+		
+		.ifModalMain {
+			box-sizing: border-box;
+			border: 2px solid black;
+			background-color: white;
+		}
+		.ifModalWrapper {
+			display: flex;
+			width: 100%;
+			height: 100%;
+			flex-direction: column;
+			overflow: hidden;
+		}
+		.ifModal {
+			flex-grow: 1;
+			box-sizing: border-box;
+			border: 0px solid black;
+			//background-color: white;
+			width: 100%;
+			//height: 100%;
+		}
+		
+		.jsLog {
+		  height: 10em;
+		  width: 20em;
+		  resize: both;
+		  overflow: auto;
+		  border-radius: 3px;
+		  border: 1px solid black;
+		  background-color: white;
+		  font-size: 12px;
+		}
+
+		/* The Close Button */
+		.closeBtn {
+		  display: inline-block;
+		  position: relativ;
+		  margin-top: -1px;
+		  margin-right: 3px;
+		  color: blacl;
+		  //mix-blend-mode: difference;
+		  float: right;
+		  font-size: 14px;
+		  font-weight: bold;
+		  border: 0px solid blue;
+		  background-color: white;
+		  border-radius: 6px;
+		}
+		/*
+		cancellation x: U+1F5D9 HTML: &#x1F5D9;
+		multiply: HTML: &times;
+		MULTIPLICATION X: U+2715 HTML: &#x2715;
+		heavy MULTIPLICATION X: U+2716 HTML: &#x2716;
+		*/
+
+		.closeBtn:hover,
+		.closeBtn:focus {
+		  color: red;
+		  text-decoration: none;
+		  cursor: pointer;
+		}

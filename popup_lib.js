@@ -253,7 +253,18 @@ class popupSet {
 				const txtModal = this.#DOMnode.querySelector("#txtModal");
 				const modalHdr = txtModal.querySelector("#modalHdrTxt");
 				const modalBdy = txtModal.querySelector("#modalBdyTxt");
-				const wikiDB = wiki;
+				let wikiDB = null;
+				if (typeof wiki !== 'undefined' && typeof wiki === 'object' && wiki !== null && Object.hasOwn(wiki,"explain")) {
+					wikiDB = wiki;
+				} else {
+					wikiDB = {
+						explain(term) {
+							return "wiki Objekt fehlt";
+						}						
+					}
+				}
+				
+				/*const wikiDB = wiki;*/
 				let keyword = "";
 				if (!popupSet.#chkParam(paramSet,0)) keyword = element.textContent; else keyword = paramSet[0];
 				this.#lastParamSet = [keyword]; /* remember for repeat */
