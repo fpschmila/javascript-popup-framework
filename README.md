@@ -60,9 +60,9 @@ A reference description is provided in the file **popup\_framework.odt**.
 
 copy the files:
 
-* **popup.html**
-* **popup\_lib.js**
-* **popup\_lib.css**
+* **popup-demo.html**
+* popup\_lib.js
+* popup\_lib.css
 * rehe.jpg
 * eichhorn.jpg
 * hasen.jpg
@@ -92,7 +92,7 @@ in a directory and open popup.html in a browser.
 
 |File name|Content|
 |-|-|
-|popup.html|demo of popups using above framework, requires popup\_lib.js and popup\_lib.css|
+|popup-demo.html|demo of popups using above framework, requires popup\_lib.js and popup\_lib.css|
 |eichhorn.jpg, hasen.jpg, rehe.jpg|used in demo for zoom up popups|
 
 
