@@ -67,7 +67,7 @@ copy the files:
 * eichhorn.jpg
 * hasen.jpg
 
-in a directory and open popup.html in a browser.
+in a directory and open popup-demo.html in a browser.
 
 
 
