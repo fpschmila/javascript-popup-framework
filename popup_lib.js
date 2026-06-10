@@ -47,11 +47,20 @@ class popupSet {
 		this.callback = callback;
 		const el = document.getElementById(popupSet.#popupElementsID).content.cloneNode(true);
 		const sectionEl = el.querySelector("#" + popupSet.#popupElementsID + "Section");
+		//remove text nodes created if <template> and <section> tag are not placed back to back
+		if (el.childNodes.length > 1) {
+			let childlist = el.childNodes
+			for (let node of childlist) {
+				if (node != sectionEl) {
+					el.removeChild(node);
+				};
+			};
+		};
 		sectionEl.id = this.instanceID;
 		
 		document.body.appendChild(el);
-		this.#DOMnode = document.body.lastChild;
-		//this.#DOMnode = document.getElementById(this.instanceID);
+		//this.#DOMnode = document.body.lastChild;
+		this.#DOMnode = document.getElementById(this.instanceID);
 
 		// hide all popup elements and set position property to fixed
 		const modalList = this.#DOMnode.querySelectorAll("section > div");
