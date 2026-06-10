@@ -49,7 +49,7 @@ class popupSet {
 		const sectionEl = el.querySelector("#" + popupSet.#popupElementsID + "Section");
 		//remove text nodes created if <template> and <section> tag are not placed back to back
 		if (el.childNodes.length > 1) {
-			let childlist = el.childNodes
+			let childlist = Array.from(el.childNodes)
 			for (let node of childlist) {
 				if (node != sectionEl) {
 					el.removeChild(node);

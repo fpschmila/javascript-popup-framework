@@ -83,7 +83,7 @@ a.explain {
 	The template/section 
 	<a class="explain" onClick="myPopupFamily.popupClick(event,-1,'wiki',['HTML Tag'])" title="explanation">tags</a>
 	for the wrapper should be kept in one line back to back. 
-	This avoids orphan text 
+	This avoids orphan text. This requirement has been dropped.
 	<a class="explain" onClick="myPopupFamily.popupClick(event,-1,'wiki')" title="explanation">DOM</a>
 	elements when removing the popup from the DOM. 
 	Each popup template must be a div containing just content or any 
@@ -171,7 +171,8 @@ a.explain {
 	<!-- tags template and section  back to back to avoid unnecassary Text nodes to create a single top level node in the template	--->
 	<!-- this is especially important when popup instance are created and destructed multiple times									--->
 	
-	<template id="popupElements"><section id="popupElementsSection"> <!-- template wrapper start, keep the two tags back to back --->
+	<template id="popupElements">
+	<section id="popupElementsSection">
 	
 	<!-- Elements used for popup system, there must be a div element at the top level of each popup element as child of the section -->
 	<!-- content, position, visibility  can be controlled by the script as customized there -->
@@ -216,7 +217,8 @@ a.explain {
 	<!-- The log Modal -->
 	<div id="jslog" class="jsLog">Javascript Log</div>
 	
-	</section></template> <!-- template wrapper end, again keep the two tags back to back --->
+	</section>
+	</template>
 	
 <!-- ===================================================== popup system  end ================================================ --->	
 
