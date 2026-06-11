@@ -13,6 +13,7 @@
 
 class popupSet {
 	static #popupElementsID = "popupElements";  // ID of the HTML template element for the popup elements
+	static #template = null						// on first instantiation will be filled with link to template object
 	instanceID = "";							// ID of the instance
 	instanceIdx = 0;							// externally used number to organize instances e.g. in array, will be used for z level
 	zLevel;										// zLevel of instance
@@ -45,22 +46,19 @@ class popupSet {
 		this.instanceID = id;
 		this.zLevel = this.instanceIdx = index;
 		this.callback = callback;
-		const el = document.getElementById(popupSet.#popupElementsID).content.cloneNode(true);
-		const sectionEl = el.querySelector("#" + popupSet.#popupElementsID + "Section");
-		//remove text nodes created if <template> and <section> tag are not placed back to back
-		if (el.childNodes.length > 1) {
-			let childlist = Array.from(el.childNodes)
-			for (let node of childlist) {
-				if (node != sectionEl) {
-					el.removeChild(node);
-				};
-			};
-		};
-		sectionEl.id = this.instanceID;
 		
-		document.body.appendChild(el);
-		//this.#DOMnode = document.body.lastChild;
-		this.#DOMnode = document.getElementById(this.instanceID);
+		// save a link to the templates section node in a class variable once at first instantiation
+		// this node will then be cloned for each knew popup
+		if (popupSet.#template == null){
+			// two steps needed as elements inside the template are not found from document
+			let tEl = document.getElementById(popupSet.#popupElementsID).content // template element
+			popupSet.#template = tEl.getElementById(popupSet.#popupElementsID + "Section") // gets section element in template
+		}
+		
+		// clone template-section node, set its individual id and add it to DOM
+		this.#DOMnode = popupSet.#template.cloneNode(true);
+		this.#DOMnode.id = this.instanceID;
+		document.body.appendChild(this.#DOMnode);
 
 		// hide all popup elements and set position property to fixed
 		const modalList = this.#DOMnode.querySelectorAll("section > div");
