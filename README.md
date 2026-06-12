@@ -96,4 +96,8 @@ in a directory and open popup-demo.html in a browser.
 |eichhorn.jpg, hasen.jpg, rehe.jpg|used in demo for zoom up popups|
 
 
+#### Deployment
 
+
+
+www.psychotherapiepraxis-ka.de
